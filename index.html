@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wijaya AC | PT Wijaya Anugrah Teknik</title>
+
+<meta name="description" content="Jasa Service AC, Cuci AC, Isi Freon, Bongkar Pasang AC, Maintenance Gedung Area Jabodetabek">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--navy:#082B6F;
+--blue:#0D5DDB;
+--gold:#F5B400;
+--light:#F7F9FC;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(8,43,111,.95);
+padding:15px 0;
+z-index:999;
+}
+
+.nav-wrap{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+height:60px;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(8,43,111,.88),rgba(8,43,111,.88)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.hero-content{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:var(--gold);
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+padding:15px 30px;
+display:inline-block;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+margin:5px;
+}
+
+.btn-primary{
+background:var(--gold);
+color:var(--navy);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+/* SECTION */
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+color:var(--navy);
+margin-bottom:50px;
+}
+
+/* STATS */
+
+.stats{
+background:var(--navy);
+color:white;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stats-grid h2{
+font-size:45px;
+color:var(--gold);
+}
+
+/* AREA */
+
+.area-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.area-item{
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+font-weight:600;
+}
+
+/* CUSTOMER */
+
+.customer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-top:15px;
+color:var(--navy);
+}
+
+/* SERVICES */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.service{
+background:var(--navy);
+color:white;
+padding:30px;
+border-radius:15px;
+}
+
+/* CATALOG */
+
+.catalog{
+background:var(--light);
+text-align:center;
+}
+
+.catalog-btn{
+display:inline-block;
+padding:18px 35px;
+background:var(--gold);
+color:var(--navy);
+font-weight:700;
+border-radius:50px;
+text-decoration:none;
+}
+
+/* BOOKING */
+
+.booking{
+background:var(--navy);
+color:white;
+}
+
+.booking-form{
+max-width:700px;
+margin:auto;
+}
+
+.booking input,
+.booking select{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+}
+
+.booking button{
+width:100%;
+padding:15px;
+background:var(--gold);
+border:none;
+font-weight:700;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#041942;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WA FLOAT */
+
+.wa-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:18px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-wrap">
+
+<img src="logo.png" class="logo">
+
+<ul>
+<li><a href="#area">Area</a></li>
+<li><a href="#layanan">Layanan</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Solusi <span>HVAC Profesional</span><br>
+untuk Rumah, Kantor & Industri
+</h1>
+
+<p>
+Cuci AC • Service AC • Instalasi AC • Maintenance Gedung
+Area Jabodetabek
+</p>
+
+<a href="https://wa.me/628118011436" class="btn btn-primary">
+Booking Teknisi
+</a>
+
+<a href="katalog/KATALOG-WIJAYA-AC-2026.pdf" target="_blank" class="btn btn-outline">
+Lihat Katalog
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div>
+<h2>5000+</h2>
+<p>Unit AC Ditangani</p>
+</div>
+
+<div>
+<h2>1500+</h2>
+<p>Pelanggan</p>
+</div>
+
+<div>
+<h2>10+</h2>
+<p>Tahun Pengalaman</p>
+</div>
+
+<div>
+<h2>24 Jam</h2>
+<p>Fast Response</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="area">
+
+<div class="container">
+
+<h2 class="section-title">Area Layanan</h2>
+
+<div class="area-grid">
+
+<div class="area-item">Jakarta</div>
+<div class="area-item">Bogor</div>
+<div class="area-item">Depok</div>
+<div class="area-item">Bekasi</div>
+<div class="area-item">Tangerang</div>
+<div class="area-item">Tangerang Selatan</div>
+<div class="area-item">Karawang</div>
+<div class="area-item">Serang</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Jenis Pelanggan</h2>
+
+<div class="customer-grid">
+
+<div class="card"><h3>🏠 Rumah Tinggal</h3></div>
+<div class="card"><h3>🏢 Perkantoran</h3></div>
+<div class="card"><h3>🏬 Ruko & Komersial</h3></div>
+<div class="card"><h3>🍽 Restoran & Cafe</h3></div>
+<div class="card"><h3>🏭 Pabrik & Industri</h3></div>
+<div class="card"><h3>🏥 Klinik & Rumah Sakit</h3></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="layanan">
+
+<div class="container">
+
+<h2 class="section-title">Layanan Kami</h2>
+
+<div class="service-grid">
+
+<div class="service">Cuci AC</div>
+<div class="service">Service AC</div>
+<div class="service">Isi Freon</div>
+<div class="service">Bongkar Pasang AC</div>
+<div class="service">Instalasi AC Baru</div>
+<div class="service">Maintenance Gedung</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="catalog">
+
+<div class="container">
+
+<h2 class="section-title">Katalog Digital</h2>
+
+<a href="katalog/KATALOG-WIJAYA-AC-2026.pdf" target="_blank" class="catalog-btn">
+📖 Buka Katalog
+</a>
+
+</div>
+
+</section>
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<h2 class="section-title" style="color:white;">Booking Teknisi</h2>
+
+<div class="booking-form">
+
+<input id="nama" placeholder="Nama">
+
+<input id="lokasi" placeholder="Lokasi">
+
+<select id="layananSelect">
+<option>Cuci AC</option>
+<option>Service AC</option>
+<option>Isi Freon</option>
+<option>Bongkar Pasang AC</option>
+</select>
+
+<button onclick="kirimWA()">
+Booking Sekarang
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="kontak" class="contact">
+
+<div class="container">
+
+<h2 class="section-title">Hubungi Kami</h2>
+
+<p>PT Wijaya Anugrah Teknik</p>
+<p>Jl. H. Rean No.32, Pamulang</p>
+<p>0811-8011-436</p>
+<p>pt.wijayaanugrahteknik1@gmail.com</p>
+
+</div>
+
+</section>
+
+<footer>
+
+PT Wijaya Anugrah Teknik © 2026
+
+</footer>
+
+<a class="wa-float" href="https://wa.me/628118011436">
+WhatsApp
+</a>
+
+<script>
+
+function kirimWA(){
+
+let nama=document.getElementById('nama').value;
+let lokasi=document.getElementById('lokasi').value;
+let layanan=document.getElementById('layananSelect').value;
+
+let pesan=
+`Halo Wijaya AC
+
+Nama : ${nama}
+Lokasi : ${lokasi}
+Layanan : ${layanan}
+
+Saya ingin booking teknisi.`;
+
+window.open(
+`https://wa.me/628118011436?text=${encodeURIComponent(pesan)}`
+);
+
+}
+
+</script>
+
+</body>
+</html>
